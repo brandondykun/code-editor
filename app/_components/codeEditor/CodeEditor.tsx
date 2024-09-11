@@ -8,7 +8,7 @@ import { FaPlay } from 'react-icons/fa';
 import { useSettings } from '@/app/_context/SettingContext';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { executeCode } from '@/api/api';
+import executeCode from '@/api/api';
 import { LanguageState } from '@/types/types';
 
 type Props = {
