@@ -1,14 +1,16 @@
-import { IconType } from "react-icons/lib";
+import { IconType } from 'react-icons/lib';
 
 // Settings Types
 
-export type CursorStyle = "block" | "line" | "underline" | "line-thin" | "block-outline" | "underline-thin" | undefined;
+export type CursorStyle = 'block' | 'line' | 'underline' | 'line-thin' | 'block-outline' | 'underline-thin' | undefined;
 
-export type TabCompletion = "on" | "off" | "onlySnippets" | undefined;
+export type TabCompletion = 'on' | 'off' | 'onlySnippets' | undefined;
 
 export type TabSize = string | undefined;
 
-export type CursorBlinking = "blink" | "smooth" | "phase" | "expand" | "solid";
+export type CursorBlinking = 'blink' | 'smooth' | 'phase' | 'expand' | 'solid';
+
+export type FontWeight = '100' | '600';
 
 // Language State Types
 
@@ -29,11 +31,11 @@ export type LanguageState = {
 export type LanguageOptions = Language[];
 
 export type LanguageOptionsStrings =
-  | "javascript"
-  | "typescript"
-  | "swift"
-  | "kotlin"
-  | "python"
-  | "go"
-  | "ruby"
-  | "rust";
+  | 'javascript'
+  | 'typescript'
+  | 'swift'
+  | 'kotlin'
+  | 'python'
+  | 'go'
+  | 'ruby'
+  | 'rust';

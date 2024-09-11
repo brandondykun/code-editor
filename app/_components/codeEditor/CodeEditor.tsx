@@ -155,6 +155,7 @@ function CodeEditor({ loading, setLoading, languageState, setLanguageState, sele
             fontSize: settings.fontSize,
             dragAndDrop: true,
             folding: settings.folding,
+            fontWeight: settings.fontWeight,
           }}
         />
       </div>

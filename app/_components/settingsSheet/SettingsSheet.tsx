@@ -123,6 +123,20 @@ function SettingsSheet() {
               </div>
             </div>
             <div className="flex flex-row items-center gap-6 justify-between">
+              <Label className="text-neutral-300 text-md" htmlFor="bold-font">
+                Bold Font
+              </Label>
+              <div className="flex flex-row items-center gap-4">
+                <Switch
+                  id="bold-font"
+                  checked={settings.fontWeight === '600'}
+                  onCheckedChange={() => {
+                    setSettings((prev) => ({ ...prev, fontWeight: prev.fontWeight === '100' ? '600' : '100' }));
+                  }}
+                />
+              </div>
+            </div>
+            <div className="flex flex-row items-center gap-6 justify-between">
               <Label className="text-neutral-300 text-md" htmlFor="code-folding">
                 Code Folding
               </Label>
