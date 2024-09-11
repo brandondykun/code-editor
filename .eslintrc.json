@@ -4,8 +4,9 @@
     "react/react-in-jsx-scope": "off",
     "object-curly-newline": "off",
     "max-len": "off",
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "react/jsx-wrap-multilines": "off"
   },
-  "ignorePatterns": ["components/ui/*", "*.mjs"],
+  "ignorePatterns": ["components/ui/*", "*.mjs", "lib/*"],
   "parserOptions": { "project": "./tsconfig.json" }
 }

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import { toast } from 'sonner';
 import { Editor, useMonaco } from '@monaco-editor/react';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
@@ -21,7 +21,7 @@ type Props = {
 function CodeEditor({ loading, setLoading, languageState, setLanguageState, selectedLanguage }: Props) {
   const { settings } = useSettings();
 
-  const inputFile = useRef<HTMLInputElement | null>(null);
+  // const inputFile = useRef<HTMLInputElement | null>(null);
   const monaco = useMonaco();
 
   // grab the current code from the language state by using the selected language as the key
@@ -59,7 +59,7 @@ function CodeEditor({ loading, setLoading, languageState, setLanguageState, sele
         <div className="flex flex-row items-center gap-6">
           <IoIosCheckmarkCircleOutline size={24} className="text-lime-500" />
           <span className="text-md">Editor contents copied to clipboard</span>
-        </div>
+        </div>,
       );
     }
   };
@@ -98,12 +98,12 @@ function CodeEditor({ loading, setLoading, languageState, setLanguageState, sele
   };
 
   // handle upload file button click
-  const onUploadFileClick = () => {
-    // `current` points to the mounted file input element
-    if (inputFile && inputFile?.current) {
-      inputFile?.current.click();
-    }
-  };
+  // const onUploadFileClick = () => {
+  //   // `current` points to the mounted file input element
+  //   if (inputFile && inputFile?.current) {
+  //     inputFile?.current.click();
+  //   }
+  // };
 
   // const onChangeFile = (event: React.ChangeEvent<HTMLInputElement>) => {
   //   if (event?.target?.files) {
