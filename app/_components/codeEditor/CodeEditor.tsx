@@ -156,6 +156,8 @@ function CodeEditor({ loading, setLoading, languageState, setLanguageState, sele
             dragAndDrop: true,
             folding: settings.folding,
             fontWeight: settings.fontWeight,
+            matchBrackets: settings.matchBrackets,
+            autoClosingBrackets: settings.autoCloseBrackets,
           }}
         />
       </div>

@@ -1,6 +1,14 @@
 import { createContext, useContext, useMemo, useState } from 'react';
 
-import { CursorStyle, TabCompletion, TabSize, CursorBlinking, FontWeight } from '@/types/types';
+import {
+  CursorStyle,
+  TabCompletion,
+  TabSize,
+  CursorBlinking,
+  FontWeight,
+  MatchBrackets,
+  AutoCloseBrackets,
+} from '@/types/types';
 
 type Settings = {
   cursorStyle: CursorStyle;
@@ -11,6 +19,8 @@ type Settings = {
   fontSize: number;
   folding: boolean;
   fontWeight: FontWeight;
+  matchBrackets: MatchBrackets;
+  autoCloseBrackets: AutoCloseBrackets;
 };
 
 type SettingsContextType = {
@@ -28,6 +38,8 @@ const SettingsContext = createContext<SettingsContextType>({
     fontSize: 14,
     folding: true,
     fontWeight: '100',
+    matchBrackets: 'always',
+    autoCloseBrackets: 'always',
   },
   setSettings: () => {},
 });
@@ -45,6 +57,8 @@ function SettingsContextProvider({ children }: Props) {
     fontSize: 14,
     folding: true,
     fontWeight: '100',
+    matchBrackets: 'always',
+    autoCloseBrackets: 'always',
   });
 
   const value = useMemo(() => ({ settings, setSettings }), [settings]);

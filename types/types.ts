@@ -3,14 +3,12 @@ import { IconType } from 'react-icons/lib';
 // Settings Types
 
 export type CursorStyle = 'block' | 'line' | 'underline' | 'line-thin' | 'block-outline' | 'underline-thin' | undefined;
-
 export type TabCompletion = 'on' | 'off' | 'onlySnippets' | undefined;
-
 export type TabSize = string | undefined;
-
 export type CursorBlinking = 'blink' | 'smooth' | 'phase' | 'expand' | 'solid';
-
 export type FontWeight = '100' | '600';
+export type MatchBrackets = 'always' | 'never';
+export type AutoCloseBrackets = 'always' | 'never';
 
 // Language State Types
 

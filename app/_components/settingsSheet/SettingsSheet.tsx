@@ -150,6 +150,34 @@ function SettingsSheet() {
                 />
               </div>
             </div>
+            <div className="flex flex-row items-center gap-6 justify-between">
+              <Label className="text-neutral-300 text-md" htmlFor="match-brackets">
+                Match Brackets
+              </Label>
+              <div className="flex flex-row items-center gap-4">
+                <Switch
+                  id="match-brackets"
+                  checked={settings.matchBrackets === 'always'}
+                  onCheckedChange={(val) => {
+                    setSettings((prev) => ({ ...prev, matchBrackets: val ? 'always' : 'never' }));
+                  }}
+                />
+              </div>
+            </div>
+            <div className="flex flex-row items-center gap-6 justify-between">
+              <Label className="text-neutral-300 text-md" htmlFor="auto-close-brackets">
+                Auto Close Brackets
+              </Label>
+              <div className="flex flex-row items-center gap-4">
+                <Switch
+                  id="auto-close-brackets"
+                  checked={settings.autoCloseBrackets === 'always'}
+                  onCheckedChange={(val) => {
+                    setSettings((prev) => ({ ...prev, autoCloseBrackets: val ? 'always' : 'never' }));
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </SheetHeader>
       </SheetContent>
