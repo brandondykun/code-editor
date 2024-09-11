@@ -1,3 +1,11 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:react/recommended", "airbnb", "airbnb-typescript"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "object-curly-newline": "off",
+    "max-len": "off",
+    "comma-dangle": 0
+  },
+  "ignorePatterns": ["components/ui/*", "*.mjs"],
+  "parserOptions": { "project": "./tsconfig.json" }
 }
