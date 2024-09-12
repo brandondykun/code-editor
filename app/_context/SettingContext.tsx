@@ -8,6 +8,8 @@ import {
   FontWeight,
   MatchBrackets,
   AutoCloseBrackets,
+  AutoCloseQuotes,
+  AutoIndent,
 } from '@/types/types';
 
 type Settings = {
@@ -21,6 +23,8 @@ type Settings = {
   fontWeight: FontWeight;
   matchBrackets: MatchBrackets;
   autoCloseBrackets: AutoCloseBrackets;
+  autoClosingQuotes: AutoCloseQuotes;
+  autoIndent: AutoIndent;
 };
 
 type SettingsContextType = {
@@ -40,6 +44,8 @@ const SettingsContext = createContext<SettingsContextType>({
     fontWeight: '100',
     matchBrackets: 'always',
     autoCloseBrackets: 'always',
+    autoClosingQuotes: 'always',
+    autoIndent: 'advanced',
   },
   setSettings: () => {},
 });
@@ -59,6 +65,8 @@ function SettingsContextProvider({ children }: Props) {
     fontWeight: '100',
     matchBrackets: 'always',
     autoCloseBrackets: 'always',
+    autoClosingQuotes: 'always',
+    autoIndent: 'advanced',
   });
 
   const value = useMemo(() => ({ settings, setSettings }), [settings]);

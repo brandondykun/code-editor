@@ -158,6 +158,12 @@ function CodeEditor({ loading, setLoading, languageState, setLanguageState, sele
             fontWeight: settings.fontWeight,
             matchBrackets: settings.matchBrackets,
             autoClosingBrackets: settings.autoCloseBrackets,
+            autoClosingQuotes: settings.autoClosingQuotes,
+            autoIndent: settings.autoIndent,
+            guides: {
+              bracketPairs: 'active',
+            },
+            codeLens: true,
           }}
         />
       </div>

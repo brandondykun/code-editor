@@ -9,6 +9,8 @@ export type CursorBlinking = 'blink' | 'smooth' | 'phase' | 'expand' | 'solid';
 export type FontWeight = '100' | '600';
 export type MatchBrackets = 'always' | 'never';
 export type AutoCloseBrackets = 'always' | 'never';
+export type AutoCloseQuotes = 'always' | 'never';
+export type AutoIndent = 'none' | 'advanced';
 
 // Language State Types
 

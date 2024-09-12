@@ -178,6 +178,36 @@ function SettingsSheet() {
                 />
               </div>
             </div>
+
+            <div className="flex flex-row items-center gap-6 justify-between">
+              <Label className="text-neutral-300 text-md" htmlFor="auto-close-quotes">
+                Auto Close Quotes
+              </Label>
+              <div className="flex flex-row items-center gap-4">
+                <Switch
+                  id="auto-close-quotes"
+                  checked={settings.autoClosingQuotes === 'always'}
+                  onCheckedChange={(val) => {
+                    setSettings((prev) => ({ ...prev, autoClosingQuotes: val ? 'always' : 'never' }));
+                  }}
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-row items-center gap-6 justify-between">
+              <Label className="text-neutral-300 text-md" htmlFor="auto-indent">
+                Auto Indent
+              </Label>
+              <div className="flex flex-row items-center gap-4">
+                <Switch
+                  id="auto-indent"
+                  checked={settings.autoIndent === 'advanced'}
+                  onCheckedChange={(val) => {
+                    setSettings((prev) => ({ ...prev, autoIndent: val ? 'advanced' : 'none' }));
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </SheetHeader>
       </SheetContent>
