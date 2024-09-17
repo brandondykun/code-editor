@@ -178,6 +178,15 @@ function SettingsSheet() {
               setSettings((prev) => ({ ...prev, autoIndent: val ? 'advanced' : 'none' }));
             }}
           />
+
+          <SettingsCheckbox
+            label="Mini Map"
+            id="mini-map"
+            checked={settings.miniMapEnabled}
+            onCheckedChange={(val) => {
+              setSettings((prev) => ({ ...prev, miniMapEnabled: val }));
+            }}
+          />
         </div>
       </SheetContent>
     </Sheet>

@@ -160,6 +160,9 @@ function CodeEditor({ loading, setLoading, languageState, setLanguageState, sele
             autoClosingBrackets: settings.autoCloseBrackets,
             autoClosingQuotes: settings.autoClosingQuotes,
             autoIndent: settings.autoIndent,
+            minimap: {
+              enabled: settings.miniMapEnabled,
+            },
             guides: {
               bracketPairs: 'active',
             },

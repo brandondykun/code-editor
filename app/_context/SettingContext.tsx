@@ -25,6 +25,7 @@ type Settings = {
   autoCloseBrackets: AutoCloseBrackets;
   autoClosingQuotes: AutoCloseQuotes;
   autoIndent: AutoIndent;
+  miniMapEnabled: boolean;
 };
 
 type SettingsContextType = {
@@ -46,6 +47,7 @@ const SettingsContext = createContext<SettingsContextType>({
     autoCloseBrackets: 'always',
     autoClosingQuotes: 'always',
     autoIndent: 'advanced',
+    miniMapEnabled: true,
   },
   setSettings: () => {},
 });
@@ -67,6 +69,7 @@ function SettingsContextProvider({ children }: Props) {
     autoCloseBrackets: 'always',
     autoClosingQuotes: 'always',
     autoIndent: 'advanced',
+    miniMapEnabled: true,
   });
 
   const value = useMemo(() => ({ settings, setSettings }), [settings]);
