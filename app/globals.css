@@ -67,3 +67,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* editor vertical scroll bar styles */
+canvas.decorationsOverviewRuler,
+.monaco-scrollable-element.editor-scrollable > div.scrollbar.vertical,
+.monaco-scrollable-element.editor-scrollable > div.scrollbar.vertical > .slider {
+  width: 7px !important; /* need this to override default styling*/
+}
+
+/* editor horizontal scroll bar styles */
+.monaco-scrollable-element.editor-scrollable > div.scrollbar.horizontal,
+.monaco-scrollable-element.editor-scrollable > div.scrollbar.horizontal > .slider {
+  height: 7px !important; /* need this to override default styling*/
+}
+
+/* editor scroll bars shared styles */
+.monaco-scrollable-element.editor-scrollable > div.scrollbar.vertical > .slider,
+.monaco-scrollable-element.editor-scrollable > div.scrollbar.horizontal > .slider {
+  background: #a3a3a3bd !important; /* need this to override default styling*/
+  border-radius: 15px;
+}
